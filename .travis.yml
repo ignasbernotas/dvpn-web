@@ -9,6 +9,7 @@ install:
 
 script:
   - yarn run build
+  - tar -zcvf dist.tar.gz dist/
   - echo uname -a
 
 deploy:
