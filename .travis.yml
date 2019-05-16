@@ -26,6 +26,7 @@ jobs:
 #        - yarn test-all
 
     - stage: deploy-dev
+      name: "Deploy 0.0.0-dev"
       script:
         - git tag -f $TRAVIS_TAG
         - git remote add gh https://${TRAVIS_REPO_SLUG%/*}:${GITHUB_API_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
